@@ -10,10 +10,7 @@
     "js": "node --harmony"
   },
   "watch": [
-    "routes/",
-    "views/",
-    "good/",
-    "imagesManage/",
+    "apis/*.js",
     "app.js"
   ],
   "env": {
