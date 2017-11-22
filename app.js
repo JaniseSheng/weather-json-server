@@ -67,7 +67,7 @@ app.post('/action_family', function(req, res, next) {
 })
 //行为洞察-家庭类人群-echart
 app.post('/action_family_echart', function(req, res, next) {
-  caction_family.api_action_family_echart(req, res, next)
+  action_family.api_action_family_echart(req, res, next)
 })
 
 //行为洞察-个人

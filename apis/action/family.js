@@ -74,7 +74,7 @@ const api_action_family = (req, res, next) => {
           id: 0,
           type: 'iptv',
           data: {
-            value: '30%',
+            value: '32%',
             name: '3口'
           }
         }, {
@@ -82,7 +82,7 @@ const api_action_family = (req, res, next) => {
           id: 1,
           type: 'iptv',
           data: {
-            value: '200',
+            value: '210',
             name: '中'
           }
         }, {
