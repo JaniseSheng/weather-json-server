@@ -40,7 +40,7 @@ const api_action_user = (req, res, next) => {
 }
 //服务监控-web
 const api_action_user_echart = (req, res, next) => {
-  const id = req.body.type
+  const id = req.body.id
   if (id == '0') {
     res.json({
       "code": 1,
