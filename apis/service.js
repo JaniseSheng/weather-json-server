@@ -13,7 +13,7 @@ const queryByDate = () => {
     return {
       date: `2017-01-${curDate}`,
       value: parseInt(Math.random() * 500) + 100,
-      changeValue: parseInt(Math.random() * 500) + 100
+      perValue: parseInt(Math.random() * 500) + 100
     }
   })
 }
