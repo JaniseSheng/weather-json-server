@@ -17,13 +17,14 @@ const queryByDate = () => {
     }
   })
 }
+
 const queryByHot = () => {
-  const num = 5
+  const num = 75
   return _.times(num, (item) => {
-    return {
-      value: parseInt(Math.random() * 500) + 100,
-      name: faker.random.word()
-    }
+    return [
+      faker.random.word(),
+      parseInt(Math.random() * 10)
+    ]
   })
 }
 
@@ -151,29 +152,16 @@ const api_public_hot_getTypeNames = (req, res, next) => {
 }
 //整体分布-分场景
 const api_public_hot = (req, res, next) => {
-  res.json({
-    code: 1,
-    data: [
-      {
-        name: '全部',
-        id: 0,
-        values: queryByHot()
-      }, {
-        name: '新闻',
-        id: 1,
-        values: queryByHot()
-      }, {
-        name: '微博',
-        id: 2,
-        values: queryByHot()
-      }, {
-        name: '公众号',
-        id: 3,
-        values: queryByHot()
-      }
-    ],
-    success: true
-  })
+  const id = req.body.type
+  if (id == '0') {
+    res.json({code: 1, data: queryByHot(), success: true})
+  } else if (id == '1') {
+    res.json({code: 1, data: queryByHot(), success: true})
+  } else if (id == '2') {
+    res.json({code: 1, data: queryByHot(), success: true})
+  } else if (id == '3') {
+    res.json({code: 1, data: queryByHot(), success: true})
+  }
 }
 
 module.exports = {

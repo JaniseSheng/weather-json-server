@@ -13,7 +13,7 @@ const queryByDate = () => {
     return {
       date: `2017-01-${curDate}`,
       value: parseInt(Math.random() * 500) + 100,
-      perValue: parseInt(Math.random() * 500) + 100
+      perValue: parseInt(Math.random() * 90) + 10
     }
   })
 }
@@ -56,7 +56,8 @@ const api_service_web = (req, res, next) => {
     data: {
       uv: queryByDate(),
       pv: queryByDate(),
-      percentage: percentageValue()
+      percentage: percentageValue(),
+      star: ['1', '3.5', '4.5', '5', '3.5', '5', '3'][parseInt(Math.random() * 5)]
     },
     success: true
   })
@@ -88,7 +89,8 @@ const api_service_app = (req, res, next) => {
     data: {
       uv: queryByDate(),
       pv: queryByDate(),
-      percentage: percentageValue()
+      percentage: percentageValue(),
+      star: ['1', '3.5', '4.5', '5', '3.5', '5', '3'][parseInt(Math.random() * 5)]
     },
     success: true
   })
@@ -120,7 +122,8 @@ const api_service_weather = (req, res, next) => {
     data: {
       uv: queryByDate(),
       pv: queryByDate(),
-      percentage: percentageValue()
+      percentage: percentageValue(),
+      star: ['1', '3.5', '4.5', '5', '3.5', '5', '3'][parseInt(Math.random() * 5)]
     },
     success: true
   })

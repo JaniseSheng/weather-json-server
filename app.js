@@ -126,6 +126,11 @@ app.post('/public_flow_getTypeNames', (req, res, next)=> {
 app.post('/public_flow', (req, res, next)=> {
   public.api_public_flow(req, res, next)
 })
+
+//舆情分析-热词搜索-获取类型的名字
+app.post('/public_hot_getTypeNames', (req, res, next)=> {
+  public.api_public_hot_getTypeNames(req, res, next)
+})
 //舆情分析-热词搜索
 app.post('/public_hot', (req, res, next)=> {
   public.api_public_hot(req, res, next)
