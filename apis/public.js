@@ -19,7 +19,7 @@ const queryByDate = () => {
 }
 
 const queryByHot = () => {
-  const num = 75
+  const num = 25
   return _.times(num, (item) => {
     return [
       faker.random.word(),
