@@ -45,8 +45,12 @@ const api_total_terminal = (req, res, next) => {
   res.json({
     code: 1,
     data: {
-      uv: queryByDate(),
-      pv: queryByDate()
+      uv: {
+        values: queryByDate()
+      },
+      pv: {
+        values: queryByDate()
+      }
     },
     success: true
   })
