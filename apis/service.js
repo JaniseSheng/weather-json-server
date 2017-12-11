@@ -11,7 +11,7 @@ const queryByDate = () => {
       ? `0${item}`
       : item
     return {
-      date: `2017-01-${curDate}`,
+      name: `2017-01-${curDate}`,
       value: parseInt(Math.random() * 500) + 100,
       perValue: parseInt(Math.random() * 90) + 10
     }
@@ -74,7 +74,9 @@ const api_service_web = (req, res, next) => {
 const api_service_web_top = (req, res, next) => {
   res.json({
     code: 1,
-    data: queryTopByDate(10),
+    data: {
+      uv: queryTopByDate(10)
+    },
     success: true
   })
 }
@@ -116,7 +118,9 @@ const api_service_app = (req, res, next) => {
 const api_service_app_top = (req, res, next) => {
   res.json({
     code: 1,
-    data: queryTopByDate(5),
+    data: {
+      uv: queryTopByDate(5)
+    },
     success: true
   })
 }
@@ -158,7 +162,9 @@ const api_service_weather = (req, res, next) => {
 const api_service_weather_top = (req, res, next) => {
   res.json({
     code: 1,
-    data: queryTopByDate(5),
+    data: {
+      uv: queryTopByDate(5)
+    },
     success: true
   })
 }
