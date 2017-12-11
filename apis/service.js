@@ -11,7 +11,7 @@ const queryByDate = () => {
       ? `0${item}`
       : item
     return {
-      name: `2017-01-${curDate}`,
+      date: `2017-01-${curDate}`,
       value: parseInt(Math.random() * 500) + 100,
       perValue: parseInt(Math.random() * 90) + 10
     }
