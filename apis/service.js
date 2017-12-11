@@ -17,6 +17,14 @@ const queryByDate = () => {
     }
   })
 }
+const queryTopByDate = (num = 5) => {
+  return _.times(num, (item) => {
+    return {
+      name: faker.random.word(),
+      value: parseInt(Math.random() * 500) + 100
+    }
+  })
+}
 const percentageValue = () => {
   const num = parseInt(Math.random() * 30) + 1
   return _.times(num, (item) => {
@@ -62,6 +70,14 @@ const api_service_web = (req, res, next) => {
     success: true
   })
 }
+//服务监控-web-top
+const api_service_web_top = (req, res, next) => {
+  res.json({
+    code: 1,
+    data: queryTopByDate(10),
+    success: true
+  })
+}
 
 //服务监控-app-获取类型的名字
 const api_service_app_getTypeNames = (req, res, next) => {
@@ -92,6 +108,15 @@ const api_service_app = (req, res, next) => {
       percentage: percentageValue(),
       star: ['1', '3.5', '4.5', '5', '3.5', '5', '3'][parseInt(Math.random() * 5)]
     },
+    success: true
+  })
+}
+
+//服务监控-app-top
+const api_service_app_top = (req, res, next) => {
+  res.json({
+    code: 1,
+    data: queryTopByDate(5),
     success: true
   })
 }
@@ -129,11 +154,23 @@ const api_service_weather = (req, res, next) => {
   })
 }
 
+//服务监控-weather-top
+const api_service_weather_top = (req, res, next) => {
+  res.json({
+    code: 1,
+    data: queryTopByDate(5),
+    success: true
+  })
+}
+
 module.exports = {
   api_service_web_getTypeNames,
   api_service_web,
+  api_service_web_top,
   api_service_app_getTypeNames,
   api_service_app,
+  api_service_app_top,
   api_service_weather_getTypeNames,
-  api_service_weather
+  api_service_weather,
+  api_service_weather_top
 }

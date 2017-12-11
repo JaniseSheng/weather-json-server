@@ -99,6 +99,10 @@ app.post('/service_web_getTypeNames', (req, res, next)=> {
 app.post('/service_web', (req, res, next)=> {
   service.api_service_web(req, res, next)
 })
+//服务监控-web_top
+app.post('/service_web_top', (req, res, next)=> {
+  service.api_service_web_top(req, res, next)
+})
 //服务监控-app-service_app_getTypeNames
 app.post('/service_app_getTypeNames', (req, res, next)=> {
   service.api_service_app_getTypeNames(req, res, next)
@@ -107,6 +111,10 @@ app.post('/service_app_getTypeNames', (req, res, next)=> {
 app.post('/service_app', (req, res, next)=> {
   service.api_service_app(req, res, next)
 })
+//服务监控-app_top
+app.post('/service_app_top', (req, res, next)=> {
+  service.api_service_app_top(req, res, next)
+})
 //服务监控-气象局自有栏目-service_app_getTypeNames
 app.post('/service_weather_getTypeNames', (req, res, next)=> {
   service.api_service_weather_getTypeNames(req, res, next)
@@ -114,6 +122,10 @@ app.post('/service_weather_getTypeNames', (req, res, next)=> {
 //服务监控-气象局自有栏目
 app.post('/service_weather', (req, res, next)=> {
   service.api_service_weather(req, res, next)
+})
+//服务监控-weather_top
+app.post('/service_weather_top', (req, res, next)=> {
+  service.api_service_weather_top(req, res, next)
 })
 /**
 * -------------------------------------------- 舆情分析 --------------------------------------------
